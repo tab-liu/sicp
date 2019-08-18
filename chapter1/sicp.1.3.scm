@@ -1,3 +1,4 @@
+; Exercise 1.3
 ; --- Question ---
 ; Define a procedure that takes three numbersas arguments and
 ; returns the sum of the squares of the two larger numbers.

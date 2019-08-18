@@ -1,3 +1,4 @@
+; Exercise 1.4
 ; --- Question ---
 ; Observe that our model of evaluation allows for combinations whose operatiors
 ; are compound expressions. Use this observation to describe the behavior of the

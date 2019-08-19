@@ -24,6 +24,7 @@
 ; For example, (k n) computes 5n^2.
 
 ; --- Answer ---
+; http://community.schemewiki.org/?sicp-ex-1.10
 (A 1 10)
 ; => 1024
 (A 2 4)

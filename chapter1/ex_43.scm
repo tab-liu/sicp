@@ -7,3 +7,10 @@
         (compose f (repeat f (- n 1)))))
 
 ((repeat square 2) 5)
+
+(define (repeated f n)
+    (if ( = n 1)
+        f
+        (compose f (repeated f (- n 1)))))
+
+((repeated square 2) 5)

@@ -12,7 +12,9 @@
     (iter lst '()))
 
 (reverse '(1 2 3))
+(reverse '(1))
 (reverse '())
 
 (reverse-iter '(1 2 3))
+(reverse-iter '(1))
 (reverse-iter '())

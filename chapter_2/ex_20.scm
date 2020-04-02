@@ -13,3 +13,11 @@
       (make odd? b (list a))))
 
 (same-parity 1 2 3 4 5 6 7)
+
+(define (same-parity1 a . b)
+  (filter (if (odd? a)
+              odd?
+              even?)
+          (cons a b)))
+
+(same-parity1 1 2 3 4 5 6 7)

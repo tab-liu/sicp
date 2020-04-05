@@ -31,12 +31,16 @@
      (branch-weight (right-branch mobile))))
 
 (define (balanced? mobile)
-  (let ((left-length (branch-length (left-branch mobile)))
-        (right-length (branch-length (right-branch mobile)))
-        (left-weight (branch-weight (left-branch mobile)))
-        (right-weight (branch-weight (right-branch mobile))))
-    (= (* left-length left-weight)
-       (* right-length right-weight))))
+  (let ((left (left-branch mobile))
+        (right (right-branch mobile)))
+    (and (= (* (branch-length left) (branch-weight left))
+            (* (branch-length right) (branch-weight right)))
+         (if (pair? (branch-structure left))
+            (balanced? (branch-structure left))
+            true)
+         (if (pair? (branch-structure right))
+            (balanced? (branch-structure right))
+            true))))
 
 ; test
 ;         b3--(1)--m2----(2)----b4
